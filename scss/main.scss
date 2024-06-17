@@ -7,7 +7,7 @@ html {
 }
 
 main {
-    margin-bottom: 400px;
+    margin-bottom: 500px;
 }
 
 .navbar-nav {
@@ -17,6 +17,7 @@ main {
 
 .hero-scene{
     position: relative;
+    margin-bottom: 20px;
     &::before{
         content:"";
         position: absolute;
@@ -42,6 +43,13 @@ main {
         justify-content: center;
     }
 }
+
+.form-label{
+    color: $primary;
+    font-weight: bold;
+}
+
+
 
 footer.footer{
     position: absolute;
