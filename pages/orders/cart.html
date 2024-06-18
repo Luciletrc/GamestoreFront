@@ -1,0 +1,53 @@
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1>Mon panier</h1>
+    </div>
+</div>
+
+<div class="container">
+    <form>
+        <div class="mb-4">
+            <label for="NomInput" class="form-label">Nom</label>
+            <input disabled type="text" class="form-control" id="NomInput" placeholder="Votre nom" value="John" name="Nom" > 
+        </div>
+        <div class="mb-4">
+            <label for="PrenomInput" class="form-label">Prénom</label>
+            <input disabled type="text" class="form-control" id="PrenomInput" placeholder="Votre prénom" value="Doe" name="Prenom"> 
+        </div>
+        <div class="mb-4">
+          <label for="EmailInput" class="form-label">Email</label>
+          <input disabled type="email" class="form-control" id="EmailInput" placeholder="votre email" value="test@email.com">
+        </div>
+        <div class="mb-4">
+            <label for="EmailInput" class="form-label">Boutique de retrait</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="boutiqueChoisie" id="midiRadio">
+                <label class="form-check-label" for="ParisRadio">Paris</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="boutiqueChoisie" id="LilleRadio">
+                <label class="form-check-label" for="LilleRadio">Lille</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="boutiqueChoisie" id="NantesRadio">
+                <label class="form-check-label" for="NantesRadio">Nantes</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="boutiqueChoisie" id="ToulouseRadio">
+                <label class="form-check-label" for="ToulouseRadio">Toulouse</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="boutiqueChoisie" id="BordeauxRadio" checked>
+                <label class="form-check-label" for="BordeauxRadio">Bordeaux</label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label for="DateInput" class="form-label">Date de retrait</label>
+            <input type="date" class="form-control" id="DateInput" name="Date"> 
+        </div>
+        <div class="text-center p-4">
+            <button type="submit" class="btn btn-primary">Confirmer la commande</button>
+            <button type="button" class="btn btn-danger">Annuler</button>
+        </div>
+    </form>
+</div>

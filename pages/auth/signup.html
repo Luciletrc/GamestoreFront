@@ -4,12 +4,12 @@
     </div>
 </div>
 <div class="container">
-    <form>
-        <div class="mb-3">
+    <form class="row g-3">
+        <div class="col-md-6 mb-3">
             <label for="NomInput" class="form-label">Nom</label>
             <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" name="Nom"> 
         </div>
-        <div class="mb-3">
+        <div class="col-md-6 mb-3">
             <label for="PrenomInput" class="form-label">Prénom</label>
             <input type="text" class="form-control" id="PrenomInput" placeholder="Votre prénom" name="Prenom"> 
         </div>
@@ -17,6 +17,21 @@
           <label for="EmailInput" class="form-label">Email</label>
           <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="Email"> 
         </div>
+        <div class="col-md-6">
+            <label for="inputCity" class="form-label">Ville</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-3">
+            <label for="inputState" class="form-label">Pays</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choisir...</option>
+              <option>France</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="inputZip" class="form-label">Code Postal</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
         <div class="mb-3">
           <label for="PasswordInput" class="form-label">Mot de passe</label>
           <input type="password" class="form-control" id="PasswordInput" name="Password">

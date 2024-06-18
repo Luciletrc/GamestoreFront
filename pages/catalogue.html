@@ -5,3 +5,50 @@
         <button class="btn btn-primary"><a class="link-body-emphasis link-underline-opacity-0" href="/Catalogue"><b>Catalogue des jeux</b></a></button>
     </div>
 </div>
+
+<!--Trigger button for Modal-->
+<div class="text-end pe-4 me-4">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionJeuModal"><i class="bi bi-pencil-square"></i> Ajouter un jeu</button>
+</div>
+
+<!-- Modal Edition-->
+<div class="modal fade" id="EditionJeuModal" tabindex="-1" aria-labelledby="EditionJeuModalLabel" aria-hidden="true">
+    <div class="modal-dialog border-dark">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="EditionJeuModalLabel">Ajouter un jeu</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="NamePhotoInput" class="form-label">Titre</label>
+                  <input type="text" class="form-control" id="NamePhotoInput" placeholder="..." name="Titre"> 
+                </div>
+                <div class="mb-3">
+                  <label for="DescriptionPhotoInput" class="form-label">Description</label>
+                  <textarea class="form-control" id="DescriptionPhotoInput" rows="4" placeholder="..." name="Description"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="NamePhotoInput" class="form-label">Prix</label>
+                  <input type="number" class="form-control" id="NamePhotoInput" placeholder="..." name="Prix"> 
+                </div>
+                <div class="mb-3">
+                  <label for="NamePhotoInput" class="form-label">Stock</label>
+                  <input type="text" class="form-control" id="NamePhotoInput" placeholder="..." name="Stock"> 
+                </div>
+                <div class="mb-3">
+                  <label for="ImageInput" class="form-label">Image</label>
+                  <input type="file" class="form-control" id="ImageInput"  name="Image">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--Contenu du catalogue-->
+
