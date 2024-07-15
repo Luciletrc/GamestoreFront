@@ -1,15 +1,11 @@
+// cart.js
+
 // Exemple de structure de données pour les articles du panier
 const panier = [];
 
 // Fonction pour ajouter un article au panier
 function ajouterAuPanier(article) {
   panier.push(article);
-  afficherPanier();
-}
-
-// Fonction pour retirer un article du panier
-function retirerDuPanier(index) {
-  panier.splice(index, 1);
   afficherPanier();
 }
 
@@ -29,7 +25,6 @@ function afficherPanier() {
         <div class="card-body">
           <h5 class="card-title">${article.nom}</h5>
           <p class="card-text">Prix: €${article.prix}</p>
-          <button class="btn btn-danger btn-sm" onclick="retirerDuPanier(${index})">Retirer</button>
         </div>
       </div>
     `;
@@ -37,18 +32,33 @@ function afficherPanier() {
   });
 }
 
-// Fonction pour réserver les articles
+// Ajouter un écouteur d'événements à tous les boutons d'ajout au panier
+document.querySelectorAll('.bi-cart-plus').forEach(button => {
+  button.addEventListener('click', event => {
+    // Récupérer les informations de l'article à partir de l'élément parent
+    const card = event.target.closest('.card');
+    const nom = card.querySelector('.card-title').textContent;
+    const prix = parseFloat(card.querySelector('.card-text').textContent.replace('Prix: €', ''));
+    const image = card.querySelector('.card-img-top').src;
+
+    // Ajouter l'article au panier
+    ajouterAuPanier({ nom, prix, image });
+  });
+});
+
+function removeFromCart(index) {
+  if (index > -1 && index < panier.length) {
+    panier.splice(index, 1);
+    afficherPanier();
+  } else {
+    console.error('Index hors limites :', index);
+  }
+}
+
 function reserverArticles() {
-  // Ici, vous pouvez ajouter la logique pour envoyer les articles réservés au serveur ou à la base de données
   const token = "";
   setToken(token);
   window.location.replace("/");
 
   alert('Les articles ont été réservés avec succès !');
 }
-
-// Exemple d'ajout d'articles au panier
-ajouterAuPanier({ nom: 'Jeu Aventure', prix: 59.99, image: 'chemin_vers_image_jeu_aventure' });
-ajouterAuPanier({ nom: 'Jeu Stratégie', prix: 39.99, image: 'chemin_vers_image_jeu_strategie' });
-
-// Assurez-vous que les ID des éléments dans le HTML correspondent à ceux utilisés dans ce script.

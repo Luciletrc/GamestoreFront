@@ -29,12 +29,16 @@
                   <textarea class="form-control" id="DescriptionPhotoInput" rows="4" placeholder="..." name="Description"></textarea>
                 </div>
                 <div class="mb-3">
-                  <label for="NamePhotoInput" class="form-label">Prix</label>
-                  <input type="price" class="form-control" id="NamePhotoInput" placeholder="..." name="Prix"> 
+                  <label for="CategoryPhotoInput" class="form-label">Catégorie</label>
+                  <input type="price" class="form-control" id="CategoryPhotoInput" placeholder="..." name="Category"> 
                 </div>
                 <div class="mb-3">
-                  <label for="NamePhotoInput" class="form-label">Stock</label>
-                  <input type="number" class="form-control" id="NamePhotoInput" placeholder="..." name="Stock"> 
+                  <label for="PricePhotoInput" class="form-label">Prix</label>
+                  <input type="price" class="form-control" id="PricePhotoInput" placeholder="..." name="Prix"> 
+                </div>
+                <div class="mb-3">
+                  <label for="StockPhotoInput" class="form-label">Stock</label>
+                  <input type="number" class="form-control" id="StockPhotoInput" placeholder="..." name="Stock"> 
                 </div>
                 <div class="mb-3">
                   <label for="ImageInput" class="form-label">Image</label>
@@ -51,21 +55,192 @@
 
 <!--Contenu du catalogue-->
 
-<nav class="d-flex justify-content-center p-4" aria-label="...">
-  <ul class="pagination pagination-circle">
-    <li class="page-item text-center">
-      <a class="page-link">Previous</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#">1<span class="visually-hidden">(current)</span></a>
-    </li>
-    <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#">2</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+<div class="container p-4">
+  <h2 class="text-center text-primary">Tous les jeux</h2>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-default filter-button" data-filter="all">All</button>
+    <button class="btn btn-default filter-button" data-filter="strategie">Stratégie</button>
+    <button class="btn btn-default filter-button" data-filter="action">Action</button>
+    <button class="btn btn-default filter-button" data-filter="rpg">RPG</button>
+    <button class="btn btn-default filter-button" data-filter="sport">Sport</button>
+    <button class="btn btn-default filter-button" data-filter="simulation">Simulation</button>
+    <button class="btn btn-default filter-button" data-filter="aventure">Aventure</button>
+</div>
+
+<div class="container">
+  <div class="gallery row row-cols-5 p-4">
+    <div class="gallery_product col filter rpg">
+      <div class="card">
+        <img src="/images/game1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Jeux n°1</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <p class="card-price">Prix: €59.99</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <button class="btn btn-primary bi-cart-plus"></a>
+            </div> 
+          </div>                    
+        </div>
+      </div>
+    </div>
+    <div class="gallery_product col filter simulation">
+      <div class="card">
+        <img src="/images/game4.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte 2</h5>
+          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+            </div> 
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="gallery_product col filter aventure">
+      <div class="card">
+        <img src="/images/game3.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte 3</h5>
+          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+            </div> 
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="gallery_product col filter sport">
+      <div class="card">
+        <img src="/images/game5.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte 4</h5>
+          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+            </div> 
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="gallery_product col filter aventure">
+      <div class="card">
+        <img src="/images/game8.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte 5</h5>
+          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+            </div> 
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="gallery_product col filter aventure">
+      <div class="card">
+        <img src="/images/game7.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte 6</h5>
+          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+            </div> 
+          </div>                    
+        </div>
+      </div>
+    </div>
+    <div class="gallery_product col filter strategie">
+      <div class="card">
+        <img src="/images/game6.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte 7</h5>
+          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+            </div> 
+          </div>                    
+        </div>
+      </div>
+    </div>
+    <div class="gallery_product col filter strategie">
+      <div class="card">
+        <img src="/images/game9.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte 8</h5>
+          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+            </div> 
+          </div>                    
+        </div>
+      </div>
+    </div>
+    <div class="gallery_product col filter action">
+      <div class="card">
+        <img src="/images/game2.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte 9</h5>
+          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+            </div> 
+          </div>                    
+        </div>
+      </div>
+    </div>
+    <div class="gallery_product col filter action">
+      <div class="card">
+        <img src="/images/game1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Titre de la carte 10</h5>
+          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
+          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+            <div class="col">
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+            </div>
+            <div class="col">
+              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+            </div> 
+          </div>                    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -20,7 +20,6 @@ function checkCredentials(){
     let requestOptions = {
       method: "POST",
       headers: myHeaders,
-      body: raw,
       redirect: "follow"
     };
     

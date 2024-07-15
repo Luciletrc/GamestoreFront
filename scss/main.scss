@@ -50,6 +50,46 @@ main {
 }
 
 
+.carousel-control-prev{
+    justify-content: flex-start;
+}
+
+.carousel-control-next {
+    justify-content: flex-end;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #003262;
+    border-radius: 5px;
+    text-align: center;
+    color: #003262;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #003262;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #003262;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #003262;
+    color: white;
+}
+
 
 footer.footer{
     position: absolute;
