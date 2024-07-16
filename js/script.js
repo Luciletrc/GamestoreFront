@@ -1,7 +1,7 @@
 const tokenCookieName = "accesstoken";
 const roleCookieName = "role";
 const signoutBtn = document.getElementById("signout-btn");
-const apiURL = 'https://127.0.0.1:8000/api/'
+const apiURL = 'http://127.0.0.1:8000/api/'
 
 signoutBtn.addEventListener("click", signout);
 
@@ -59,7 +59,7 @@ function isConnected(){
 }
 
 /* disconnected
-connected (admin, employee, client) */
+connected (admin, employee, user) */
 
 function showAndHideElementsForRoles(){
     const userConnected = isConnected();
@@ -89,8 +89,8 @@ function showAndHideElementsForRoles(){
                     element.classList.add("d-none");
                 }
                 break;
-            case 'client':
-                if(!userConnected || role != "client"){
+            case 'user':
+                if(!userConnected || role != "user"){
                     element.classList.add("d-none");
                 }
                 break;
@@ -109,7 +109,7 @@ function getInfosUser(){
         redirect: 'follow'
     };
 
-    fetch(apiUrl+"account/me", requestOptions)
+    fetch(apiURL+"account/me", requestOptions)
     .then(response =>{
         if(response.ok){
             return response.json();

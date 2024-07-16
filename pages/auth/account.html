@@ -3,13 +3,64 @@
         <h1>Mon compte</h1>
     </div>
 </div>
+
+<!--Trigger button for Modal-->
+<div class="text-end pe-4 me-4">
+    <button data-show="admin" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionJeuModal"><i class="bi bi-pencil-square"></i> Ajouter un jeu</button>
+</div>
+
+<!-- Modal Edition-->
+<div class="modal fade" id="EditionJeuModal" tabindex="-1" aria-labelledby="EditionJeuModalLabel" aria-hidden="true">
+    <div class="modal-dialog border-dark">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="EditionJeuModalLabel">Ajouter un jeu</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="mb-3">
+                    <label for="NamePhotoInput" class="form-label">Titre</label>
+                    <input type="text" class="form-control" id="NamePhotoInput" placeholder="..." name="Titre"> 
+                </div>
+                <div class="mb-3">
+                    <label for="DescriptionPhotoInput" class="form-label">Description</label>
+                    <textarea class="form-control" id="DescriptionPhotoInput" rows="4" placeholder="..." name="Description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="CategoryPhotoInput" class="form-label">Catégorie</label>
+                    <input type="price" class="form-control" id="CategoryPhotoInput" placeholder="..." name="Category"> 
+                </div>
+                <div class="mb-3">
+                    <label for="PricePhotoInput" class="form-label">Prix</label>
+                    <input type="price" class="form-control" id="PricePhotoInput" placeholder="..." name="Prix"> 
+                </div>
+                <div class="mb-3">
+                    <label for="StockPhotoInput" class="form-label">Stock</label>
+                    <input type="number" class="form-control" id="StockPhotoInput" placeholder="..." name="Stock"> 
+                </div>
+                <div class="mb-3">
+                    <label for="ImageInput" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="ImageInput"  name="Image">
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
 
     <div class="text-center p-4">
         <button data-show="admin" type="button" class="btn btn-primary btn-lg"><a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="/">Tableau de bord</a></button>
         <button data-show="employee" type="button" class="btn btn-primary btn-lg"><a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="/">Tableau de bord</a></button>
-        <button data-show="client" type="button" class="btn btn-primary"><a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="/orders">Historique des commandes</a></button>
+        <button data-show="user" type="button" class="btn btn-primary"><a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="/orders">Historique des commandes</a></button>
     </div>
+
+    
 
     <form>
         <div class="mb-3">

@@ -5,56 +5,6 @@
     </div>
 </div>
 
-<!--Trigger button for Modal-->
-<div class="text-end pe-4 me-4">
-        <button data-show="admin" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionJeuModal"><i class="bi bi-pencil-square"></i> Ajouter un jeu</button>
-</div>
-
-<!-- Modal Edition-->
-<div class="modal fade" id="EditionJeuModal" tabindex="-1" aria-labelledby="EditionJeuModalLabel" aria-hidden="true">
-    <div class="modal-dialog border-dark">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="EditionJeuModalLabel">Ajouter un jeu</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                  <label for="NamePhotoInput" class="form-label">Titre</label>
-                  <input type="text" class="form-control" id="NamePhotoInput" placeholder="..." name="Titre"> 
-                </div>
-                <div class="mb-3">
-                  <label for="DescriptionPhotoInput" class="form-label">Description</label>
-                  <textarea class="form-control" id="DescriptionPhotoInput" rows="4" placeholder="..." name="Description"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="CategoryPhotoInput" class="form-label">Catégorie</label>
-                  <input type="price" class="form-control" id="CategoryPhotoInput" placeholder="..." name="Category"> 
-                </div>
-                <div class="mb-3">
-                  <label for="PricePhotoInput" class="form-label">Prix</label>
-                  <input type="price" class="form-control" id="PricePhotoInput" placeholder="..." name="Prix"> 
-                </div>
-                <div class="mb-3">
-                  <label for="StockPhotoInput" class="form-label">Stock</label>
-                  <input type="number" class="form-control" id="StockPhotoInput" placeholder="..." name="Stock"> 
-                </div>
-                <div class="mb-3">
-                  <label for="ImageInput" class="form-label">Image</label>
-                  <input type="file" class="form-control" id="ImageInput"  name="Image">
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!--Contenu du catalogue-->
-
 <div class="container p-4">
   <h2 class="text-center text-primary">Tous les jeux</h2>
 </div>
@@ -77,13 +27,41 @@
         <div class="card-body">
           <h5 class="card-title">Jeux n°1</h5>
           <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
-          <p class="card-price">Prix: €59.99</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h6 class="card-price">Prix: €59.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux1Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux1Modal" tabindex="-1" aria-labelledby="Jeux1ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux1ModalLabel"><b>Jeux n°1</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game1.jpg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: RPG</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/7.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€59.99</b></p>
+                      <p class="align-self-end">Stock: 4</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <button class="btn btn-primary bi-cart-plus"></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
           </div>                    
         </div>
@@ -93,33 +71,91 @@
       <div class="card">
         <img src="/images/game4.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titre de la carte 2</h5>
-          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h5 class="card-title">Jeux n°2</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <h6 class="card-price">Prix: €59.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux2Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux2Modal" tabindex="-1" aria-labelledby="Jeux2ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux2ModalLabel"><b>Jeux n°2</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game4.jpeg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: Simulation</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/12.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€59.99</b></p>
+                      <p class="align-self-end">Stock: 5</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
-          </div> 
+          </div>
         </div>
       </div>
     </div>
-    <div class="gallery_product col filter aventure">
+    <div class="gallery_product col filter rpg">
       <div class="card">
         <img src="/images/game3.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titre de la carte 3</h5>
-          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h5 class="card-title">Jeux n°3</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <h6 class="card-price">Prix: €39.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux3Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux3Modal" tabindex="-1" aria-labelledby="Jeux3ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux3ModalLabel"><b>Jeux n°3</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game3.jpeg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: RPG</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/18.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€39.99</b></p>
+                      <p class="align-self-end">Stock: 3</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
-          </div> 
+          </div>
         </div>
       </div>
     </div>
@@ -127,16 +163,45 @@
       <div class="card">
         <img src="/images/game5.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titre de la carte 4</h5>
-          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h5 class="card-title">Jeux n°4</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <h6 class="card-price">Prix: €69.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux4Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux4Modal" tabindex="-1" aria-labelledby="Jeux4ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux4ModalLabel"><b>Jeux n°4</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game5.jpeg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: Sport</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/16.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€69.99</b></p>
+                      <p class="align-self-end">Stock: 5</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
-          </div> 
+          </div>
         </div>
       </div>
     </div>
@@ -144,101 +209,275 @@
       <div class="card">
         <img src="/images/game8.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titre de la carte 5</h5>
-          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h5 class="card-title">Jeux n°5</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <h6 class="card-price">Prix: €49.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux5Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux5Modal" tabindex="-1" aria-labelledby="Jeux5ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux5ModalLabel"><b>Jeux n°5</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game8.jpeg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: Aventure</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/12.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€49.99</b></p>
+                      <p class="align-self-end">Stock: 1</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
           </div> 
         </div>
       </div>
     </div>
-    <div class="gallery_product col filter aventure">
+    <div class="gallery_product col filter aventure pt-4">
       <div class="card">
         <img src="/images/game7.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titre de la carte 6</h5>
-          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h5 class="card-title">Jeux n°6</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <h6 class="card-price">Prix: €59.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux6Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux6Modal" tabindex="-1" aria-labelledby="Jeux6ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux6ModalLabel"><b>Jeux n°6</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game7.jpeg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: Aventure</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/12.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€59.99</b></p>
+                      <p class="align-self-end">Stock: 2</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
-          </div>                    
+          </div>                   
         </div>
       </div>
     </div>
-    <div class="gallery_product col filter strategie">
+    <div class="gallery_product col filter strategie pt-4">
       <div class="card">
         <img src="/images/game6.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titre de la carte 7</h5>
-          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h5 class="card-title">Jeux n°7</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <h6 class="card-price">Prix: €59.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux7Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux7Modal" tabindex="-1" aria-labelledby="Jeux7ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux7ModalLabel"><b>Jeux n°7</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game6.jpeg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: RPG</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/3.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€59.99</b></p>
+                      <p class="align-self-end">Stock: 5</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
-          </div>                    
+          </div>                   
         </div>
       </div>
     </div>
-    <div class="gallery_product col filter strategie">
+    <div class="gallery_product col filter strategie pt-4">
       <div class="card">
         <img src="/images/game9.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titre de la carte 8</h5>
-          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h5 class="card-title">Jeux n°8</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <h6 class="card-price">Prix: €69.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux8Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux8Modal" tabindex="-1" aria-labelledby="Jeux8ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux8ModalLabel"><b>Jeux n°8</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game9.jpeg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: Stratégie</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/16.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€69.99</b></p>
+                      <p class="align-self-end">Stock: 3</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
-          </div>                    
+          </div>                 
         </div>
       </div>
     </div>
-    <div class="gallery_product col filter action">
+    <div class="gallery_product col filter action pt-4">
       <div class="card">
         <img src="/images/game2.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titre de la carte 9</h5>
-          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h5 class="card-title">Jeux n°9</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <h6 class="card-price">Prix: €39.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux9Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux9Modal" tabindex="-1" aria-labelledby="Jeux9ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux9ModalLabel"><b>Jeux n°9</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game2.jpeg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: Action</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/7.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€39.99</b></p>
+                      <p class="align-self-end">Stock: 4</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
-          </div>                    
+          </div>                   
         </div>
       </div>
     </div>
-    <div class="gallery_product col filter action">
+    <div class="gallery_product col filter action pt-4">
       <div class="card">
         <img src="/images/game1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Titre de la carte 10</h5>
-          <p class="card-text">Texte rapide d'exemple pour construire sur le titre de la carte et constituer l'essentiel du contenu de la carte.</p>
-          <div class="row row-cols-auto d-flex justify-content-center align-items-baseline">
+          <h5 class="card-title">Jeux n°10</h5>
+          <p class="card-text">Description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+          <h6 class="card-price">Prix: €59.99</h6>
+          <div class="row row-cols-auto d-flex justify-content-end align-items-baseline">
             <div class="col">
-              <p class="text-start fst-italic"><a class="link-offset-2" href="#">En savoir plus</a></p>
+              <p class="text-start fst-italic"><a class="link-offset-2" href="#" data-bs-toggle="modal" data-bs-target="#DetailJeux10Modal">Détails</a></p>
+              <div class="modal fade" id="DetailJeux10Modal" tabindex="-1" aria-labelledby="Jeux10ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="Jeux10ModalLabel"><b>Jeux n°10</b></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column align-items-center">
+                      <img src="/images/game1.jpg" class="img-fluid p-4 w-50" alt="...">
+                      <p style="text-align: justify;"><b>Description</b> : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue mauris rhoncus aenean vel. Sed id semper risus in hendrerit gravida. Ullamcorper a lacus vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
+                      <div class="row row-cols-2 pt-4 pb-4">
+                        <div class="col">
+                          <i>Catégorie: Action</i>
+                        </div>
+                        <div class="col" style="text-align-last: end;">
+                          <img src="/images/pegi/3.png" style="width: 20%; height: 20%;">
+                        </div>
+                      </div>
+                      <p class="align-self-start">Prix: <b>€59.99</b></p>
+                      <p class="align-self-end">Stock: 3</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary bi-cart-plus" data-show="user"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <a href="#" class="btn btn-primary"><i class="bi bi-cart-plus"></i></a>
+              <button class="btn btn-primary bi-cart-plus" data-show="user"></a>
             </div> 
-          </div>                    
+          </div>                   
         </div>
       </div>
     </div>
