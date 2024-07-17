@@ -79,18 +79,18 @@ function showAndHideElementsForRoles(){
                     element.classList.add("d-none");
                 }
                 break;
-            case 'admin':
-                if(!userConnected || role != "admin"){
+            case 'ROLE_ADMIN':
+                if(!userConnected || role != "ROLE_ADMIN"){
                     element.classList.add("d-none");
                 }
                 break;
-            case 'employee':
-                if(!userConnected || role != "employee"){
+            case 'ROLE_EMPLOYEE':
+                if(!userConnected || role != "ROLE_EMPLOYEE"){
                     element.classList.add("d-none");
                 }
                 break;
-            case 'user':
-                if(!userConnected || role != "user"){
+            case 'ROLE_USER':
+                if(!userConnected || role != "ROLE_USER"){
                     element.classList.add("d-none");
                 }
                 break;
