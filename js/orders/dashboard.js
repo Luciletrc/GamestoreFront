@@ -1,29 +1,87 @@
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Action', 'Aventure', 'RPG'],
-        datasets: [{
-            label: 'Nombre de jeux vendus',
-            data: [1000, 700, 1200],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)'
-            ],
-            borderWidth: 1
-        }]
+function getRandomData() {
+  let data = [];
+  for (let i = 0; i < 12; i++) {
+    data.push(Math.floor(Math.random() * 30) + 1);
+  }
+  return data;
+}
+
+const config = {
+  type: 'line',
+  data: {
+    labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+    datasets: [
+      {
+        label: 'Action',
+        data: getRandomData(),
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(255, 99, 132)',
+      },
+      {
+        label: 'Aventure',
+        data: getRandomData(),
+        borderColor: 'rgb(54, 162, 235)',
+        backgroundColor: 'rgb(54, 162, 235)',
+      },
+      {
+        label: 'Stratégie',
+        data: getRandomData(),
+        borderColor: 'rgb(255, 147, 50)',
+        backgroundColor: 'rgb(255, 147, 50)',
+      },
+      {
+        label: 'Simulation',
+        data: getRandomData(),
+        borderColor: 'rgb(82, 255, 50)',
+        backgroundColor: 'rgb(82, 255, 50)',
+      },
+      {
+        label: 'RPG',
+        data: getRandomData(),
+        borderColor: 'rgb(51, 250, 250)',
+        backgroundColor: 'rgb(51, 250, 250)',
+      },
+      {
+        label: 'Sport',
+        data: getRandomData(),
+        borderColor: 'rgb(251, 51, 253)',
+        backgroundColor: 'rgb(215, 51, 253)',
+      },
+    ]
+  },
+  options: {
+    plugins: {
+      legend: true,
+      tooltip: true,
+      filler: true,
+      title: {
+        display: true,
+        text: 'Ventes de jeux par catégorie par mois'
+      }
     },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
+    scales: {
+      x: {
+        type: 'category',
+        position: 'bottom'
+      }
     }
-});
+  },
+  plugins: [{
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      ctx.save();
+      ctx.strokeRect(0, 0, chart.width, chart.height);
+      ctx.restore();
+    }
+  }]
+};
+
+// Options du graphique
+const options = {
+  spriteText: true,
+};
+
+// Création du graphique
+const ctx = document.getElementById('myChart').getContext('2d');
+new Chart(ctx, config);
+
