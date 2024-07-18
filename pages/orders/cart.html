@@ -4,51 +4,94 @@
     </div>
 </div>
 
-<div class="container mt-5">
-    <h2 class="mb-4">Votre Panier</h2>
-    <div class="row d-flex align-items-start">
-      <div class="col-lg-8">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Articles dans le panier</h5>
-                    <!-- Liste des articles -->
-                    <div class="card mb-3" id="cart-item">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="path_to_image" class="card-img" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nom du Jeu</h5>
-                                    <p class="card-text">Prix: €59,99</p>
-                                    <button class="btn btn-danger btn-sm" onclick="removeFromCart()">Retirer</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Répéter pour chaque article -->
-                </div>
-            </div>
+<div class="container shopping-cart">
+
+    <div class="title" style="font-size: 25px;">
+      <p><b>Mon panier</b></p>
+    </div>
+   
+    <div class="item">
+      <div class="row description border border-primary">
+        <div class="col text-center">
+            <img src="/images/jeux/lifebyyou.jpeg" alt="" style="width: 75%; height: 75%;"/>
         </div>
-        <div class="col-lg-4">
-            <div class="card">
-            <div class="card-body">
-                    <h5 class="card-title">Résumé de la commande</h5>
-                    <p class="card-text">Total: €XX,XX</p>
-                    <button class="btn btn-primary btn-lg btn-block" onclick="reserveItems()">Réserver les articles</button>
-                </div>
-            </div>
+        <div class="col-6 mt-4">
+            <p style="font-size: 25px;"><b>Life by You</b></p>
+            <p>Description: eros in cursus turpis massa tincidunt.</p>
+            <p>Catégorie: simulation</p>
+            <p>Prix: €59.99</p>
         </div>
+        <div class="col">
+            <div class="quantity">
+                <button class="minus-btn" type="button" name="button">
+                <img src="/images/svg/dash-circle.svg" alt="" />
+                </button>
+                <input type="text" name="name" value="1">
+                <button class="plus-btn" type="button" name="button">
+                <img src="/images/svg/plus-circle.svg" alt="" />
+                </button>        
+            </div>
+        </div>        
+      </div>
+    </div>
+
+    <div class="item">   
+      <div class="row description border border-primary">
+        <div class="col text-center">
+            <img src="/images/jeux/dynamonsworld.jpeg" alt="" style="width: 75%; height: 75%;"/>
+        </div>
+        <div class="col-6 mt-4">
+            <p style="font-size: 25px;"><b>Dynamons World</b></p>
+            <p>Description: eros in cursus turpis massa tincidunt.</p>
+            <p>Catégorie: aventure</p>
+            <p>Prix: €39.99</p>
+        </div>
+        <div class="col">
+            <div class="quantity">
+                <button class="minus-btn" type="button" name="button">
+                <img src="/images/svg/dash-circle.svg" alt="" />
+                </button>
+                <input type="text" name="name" value="1">
+                <button class="plus-btn" type="button" name="button">
+                <img src="/images/svg/plus-circle.svg" alt="" />
+                </button>        
+            </div>
+        </div>        
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="row description border border-primary">
+        <div class="col text-center">
+            <img src="/images/jeux/lordoffallen.jpg" alt="" style="width: 75%; height: 75%;"/>
+        </div>
+        <div class="col-6 mt-4">
+            <p style="font-size: 25px;"><b>Lords of the Fallen</b></p>
+            <p>Description: eros in cursus turpis massa tincidunt.</p>
+            <p>Catégorie: RPG</p>
+            <p>Prix: €69.99</p>
+        </div>
+        <div class="col">
+            <div class="quantity">
+                <button class="minus-btn" type="button" name="button">
+                <img src="/images/svg/dash-circle.svg" alt="" />
+                </button>
+                <input type="text" name="name" value="1">
+                <button class="plus-btn" type="button" name="button">
+                <img src="/images/svg/plus-circle.svg" alt="" />
+                </button>        
+            </div>
+        </div>        
+      </div>
     </div>
 </div>
 
 
-
-
-
-
 <div class="container">
-    <form>
+    <div class="title" style="font-size: 25px;">
+    <p><b>Mes informations</b></p>
+    </div>
+    <form class="orderForm" id="orderForm">
         <div class="mb-4">
             <label for="NomInput" class="form-label">Nom</label>
             <input disabled type="text" class="form-control" id="NomInput" placeholder="Votre nom" value="John" name="Nom" > 
@@ -62,9 +105,9 @@
           <input disabled type="email" class="form-control" id="EmailInput" placeholder="votre email" value="test@email.com">
         </div>
         <div class="mb-4">
-            <label for="EmailInput" class="form-label">Boutique de retrait</label>
+            <label for="StoreInput" class="form-label">Boutique de retrait</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="boutiqueChoisie" id="midiRadio">
+                <input class="form-check-input" type="radio" name="boutiqueChoisie" id="ParisRadio">
                 <label class="form-check-label" for="ParisRadio">Paris</label>
             </div>
             <div class="form-check">
@@ -86,10 +129,16 @@
         </div>
         <div class="mb-4">
             <label for="DateInput" class="form-label">Date de retrait</label>
-            <input type="date" class="form-control" id="DateInput" name="Date"> 
+            <input
+            type="date"
+            value="2024-07-23"
+            min="2024-07-23"
+            max="2024-07-30"
+            class="form-control"
+            id="DateInput" name="Date"> 
         </div>
         <div class="text-center p-4">
-            <button type="submit" class="btn btn-primary">Confirmer la commande</button>
+            <button type="button" class="btn btn-primary" id="orderConfirm">Confirmer la commande</button>
             <button type="button" class="btn btn-danger">Annuler</button>
         </div>
     </form>

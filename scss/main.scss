@@ -90,6 +90,76 @@ main {
     color: white;
 }
 
+.shopping-cart {
+    margin: 50px auto;
+    background: #FFFFFF;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttons {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+  }
+
+  .is-active {
+    animation-name: animate;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+  }
+   
+  @keyframes animate {
+    0%   { background-position: left;  }
+    50%  { background-position: right; }
+    100% { background-position: right; }
+  }
+
+  .image {
+    margin-right: 50px;
+  }
+
+  .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quantity input {
+    border: none;
+    text-align: center;
+    width: 35px;
+    font-size: 30px;
+    font-weight: 300;
+  }
+   
+  .minus-btn, .plus-btn {
+    border: none;
+    cursor: pointer;
+    background-color: #FFFFFF;
+  }
+   
+  button:focus,
+  input:focus {
+    outline:0;
+  }
+
+  @media (max-width: 800px) {
+    .shopping-cart {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+    .item {
+      height: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
 
 footer.footer{
     position: absolute;

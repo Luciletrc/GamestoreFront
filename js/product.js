@@ -28,4 +28,5 @@ class Product {
   }
 }
 
-export default Product;
+<script type="module" src="cart.js"></script>
+

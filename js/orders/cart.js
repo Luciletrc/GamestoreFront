@@ -1,20 +1,29 @@
-class Cart {
-  constructor() {
-    this.products = [];
-  }
-
-  addProduct(product) {
-    if (product.isInStock()) {
-      product.purchase();
-      this.products.push(product);
+$('.minus-btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+ 
+    if (value > 1) {
+        value = value - 1;
     } else {
-      console.log(`Désolé, ${product.title} est en rupture de stock.`);
+        value = 1;
     }
-  }
-
-  getTotalPrice() {
-    return this.products.reduce((total, product) => total + product.price, 0);
-  }
-}
-
-export default Cart;
+ 
+    $input.val(value);
+});
+ 
+$('.plus-btn').on('click', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+ 
+    if (value < 5) {
+        value = value + 1;
+    } else {
+        value = 5;
+    }
+ 
+    $input.val(value);
+});
