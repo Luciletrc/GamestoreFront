@@ -5,15 +5,22 @@ Ce site est un site vitrine pour la boutique de jeux vidéo : Gamestore
 
 ## Installation
 
-### Project requirements
-
-- [PHP >=7.2.5 or higher](http://php.net/manual/fr/install.php)
-- [SQL >=8.0](https://www.mysql.com/fr/downloads/)
-- [Symfony CLI](https://symfony.com/download)
-- [Composer](https://getcomposer.org/download)
-- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- PHP extensions such as : Iconv, JSON, PCRE, Session, Tokenizer and the [usual Symfony application requirements][1].
-
+1. Clone the current repository (SSH):
 ```bash
-$ symfony check:requirements # To check minimal requirements for the project
+$ git clone 'git@github.com:Luciletrc/GamestoreFront.git'
 ```
+
+2. Install dependencies:
+```bash
+$ npm install
+```
+
+3. Install PHP Extension : brapifra.phpserver
+![Application view](./images/phpserver.png "Application PHP Server")
+
+## Utilisation
+
+1. Open PHP application
+![Application view](./images/openphp.png "Application PHP Server")
+
+2. Connect to http://localhost:8000/
